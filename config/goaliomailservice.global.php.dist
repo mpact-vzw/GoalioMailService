@@ -10,9 +10,9 @@ $settings = array(
     /**
      * Transport Class
      *
-     * Name of Zend Transport Class to use
+     * Name of Laminas Transport Class to use
      */
-    'type' => 'Zend\Mail\Transport\Sendmail',
+    'transport_class' => 'Laminas\Mail\Transport\Sendmail',
 
     'options' => array(),
 

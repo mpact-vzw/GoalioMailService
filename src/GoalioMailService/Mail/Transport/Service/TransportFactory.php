@@ -1,8 +1,8 @@
 <?php
 namespace GoalioMailService\Mail\Transport\Service;
 
-use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\FactoryInterface;
 
 class TransportFactory implements FactoryInterface {
 
@@ -21,6 +21,6 @@ class TransportFactory implements FactoryInterface {
             $options['options'] = $options['transport_options'];
         }
 
-        return \Zend\Mail\Transport\Factory::create($options);
+        return \Laminas\Mail\Transport\Factory::create($options);
     }
 }

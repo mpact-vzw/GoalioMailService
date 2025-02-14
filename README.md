@@ -11,17 +11,19 @@ Provide configurable Mail Transport Factory  and simple messaging for ZF2
 Requirements
 ------------
 
-* [Zend Framework 2](https://github.com/zendframework/zf2) (> 2.3.3).
+* [Laminas](https://github.com/laminas/).
 
 Features / Goals
 ----------------
 
-* Configure transport service for using Zend\Mail [COMPLETE]
+* Configure transport service for using Laminas\Mail [COMPLETE]
 
 Changelog
 ---------
 With ZF2.3 the Transport Factory changed. This made changes to the configuration in the goaliomailservice.global.php (and goaliomailservice.local.php) neccessary.
 I tried to check this in my own factory, but please be aware of this.
+
+Migrated with the help of laminas-migration by BLA
 
 Installation
 ------------
@@ -67,15 +69,15 @@ Installation
 Usage
 -----
 
-	// The template used by the PhpRenderer to create the content of the mail
-	$viewTemplate = 'module/email/testmail';
+    // The template used by the PhpRenderer to create the content of the mail
+    $viewTemplate = 'module/email/testmail';
 
-	// The ViewModel variables to pass into the renderer
-	$value = array('foo' => 'bar');
+    // The ViewModel variables to pass into the renderer
+    $value = array('foo' => 'bar');
 
-	$mailService = $this->getServiceManager()->get('goaliomailservice_message');
-	$message = $mailService->createTextMessage($from, $to, $subject, $viewTemplate, $values);
-	$mailService->send($message);
+    $mailService = $this->getServiceManager()->get('goaliomailservice_message');
+    $message = $mailService->createTextMessage($from, $to, $subject, $viewTemplate, $values);
+    $mailService->send($message);
 
 SMTP Setup
 ----------
@@ -83,9 +85,9 @@ SMTP Setup
 GoalioMailService uses sendmail by default, but you can set it up to use SMTP by putting your information in the config file like this:
 
     $settings = array(
-        'type' => 'Zend\Mail\Transport\Smtp',
+        'transport_class' => 'Laminas\Mail\Transport\Smtp',
 
-        'options_class' => 'Zend\Mail\Transport\SmtpOptions',
+        'options_class' => 'Laminas\Mail\Transport\SmtpOptions',
 
         'options' => array(
             'host' => 'smtp.gmail.com',
