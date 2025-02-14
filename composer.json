@@ -1,10 +1,10 @@
 {
     "name": "goalio/goalio-mailservice",
-    "description": "Provide configurable Mail Transport Factories for ZF2",
+    "description": "Provide configurable Mail Transport Factories for Laminas",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": [
-        "zf2"
+        "ZF2", "laminas"
     ],
     "homepage": "https://github.com/goalio/GoalioMailService",
     "authors": [
@@ -12,60 +12,19 @@
             "name": "Philipp Dobrigkeit",
             "email": "p.dobrigkeit@goalio.de",
             "homepage": "http://www.goalio.de"
+        },
+        {
+            "name": "Bart Lateur",
+            "email": "bart.lateur@mpact.be",
+            "homepage": "https://mpact.be"
         }
     ],
     "require": {
-        "php": ">=5.3.3",
-        "laminas/laminas-dependency-plugin": "*",
-        "laminas/laminas-authentication": "*",
-        "laminas/laminas-barcode": "*",
-        "laminas/laminas-cache": "*",
-        "laminas/laminas-captcha": "*",
-        "laminas/laminas-code": "*",
-        "laminas/laminas-config": "*",
-        "laminas/laminas-console": "*",
-        "laminas/laminas-crypt": "*",
-        "laminas/laminas-db": "*",
-        "laminas/laminas-di": "*",
-        "laminas/laminas-dom": "*",
-        "laminas/laminas-escaper": "*",
+        "php": ">=7.4.0",
         "laminas/laminas-eventmanager": "*",
-        "laminas/laminas-feed": "*",
-        "laminas/laminas-file": "*",
-        "laminas/laminas-filter": "*",
-        "laminas/laminas-form": "*",
-        "laminas/laminas-http": "*",
-        "laminas/laminas-i18n": "*",
-        "laminas/laminas-i18n-resources": "*",
-        "laminas/laminas-inputfilter": "*",
-        "laminas/laminas-json": "*",
-        "laminas/laminas-loader": "*",
-        "laminas/laminas-log": "*",
-        "laminas/laminas-mail": "*",
-        "laminas/laminas-math": "*",
-        "laminas/laminas-memory": "*",
-        "laminas/laminas-mime": "*",
         "laminas/laminas-modulemanager": "*",
         "laminas/laminas-mvc": "*",
-        "laminas/laminas-navigation": "*",
-        "laminas/laminas-paginator": "*",
-        "laminas/laminas-permissions-acl": "*",
-        "laminas/laminas-permissions-rbac": "*",
-        "laminas/laminas-progressbar": "*",
-        "laminas/laminas-serializer": "*",
-        "laminas/laminas-server": "*",
-        "laminas/laminas-servicemanager": "*",
-        "laminas/laminas-session": "*",
-        "laminas/laminas-soap": "*",
-        "laminas/laminas-stdlib": "*",
-        "laminas/laminas-tag": "*",
-        "laminas/laminas-test": "*",
-        "laminas/laminas-text": "*",
-        "laminas/laminas-uri": "*",
-        "laminas/laminas-validator": "*",
-        "laminas/laminas-view": "*",
-        "laminas/laminas-xmlrpc": "*",
-        "laminas/laminas-xml": "*"
+        "laminas/laminas-view": "*"
     },
     "autoload": {
         "psr-0": {
