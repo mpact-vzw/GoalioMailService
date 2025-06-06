@@ -1,15 +1,14 @@
 <?php
 namespace GoalioMailService\Mail\Transport\Service;
-
-use Laminas\ServiceManager\ServiceLocatorInterface;
-use Laminas\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use Psr\Container\ContainerInterface;
 
 class TransportFactory implements FactoryInterface {
-
-    public function createService(ServiceLocatorInterface $serviceLocator) {
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
+    {
 
         /** @var TransportOptions $options */
-        $config = $serviceLocator->get('config');
+        $config = $container->get('config');
         $options = $config['goaliomailservice'];
 
         // Backwards compatibility with old config files

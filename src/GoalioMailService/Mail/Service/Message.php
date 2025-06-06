@@ -2,12 +2,11 @@
 namespace GoalioMailService\Mail\Service;
 
 use Laminas\ServiceManager\ServiceManager;
-use Laminas\ServiceManager\ServiceManagerAwareInterface;
 use Laminas\Mail\Message as MailMessage;
 use Laminas\Mime\Message as MimeMessage;
 use Laminas\Mime\Part as MimePart;
 
-class Message implements ServiceManagerAwareInterface {
+class Message {
 
     /**
      *

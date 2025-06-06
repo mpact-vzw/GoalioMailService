@@ -1,5 +1,5 @@
 {
-    "name": "goalio/goalio-mailservice",
+    "name": "mpact-vzw/goalio-mailservice",
     "description": "Provide configurable Mail Transport Factories for Laminas",
     "type": "library",
     "license": "BSD-3-Clause",
